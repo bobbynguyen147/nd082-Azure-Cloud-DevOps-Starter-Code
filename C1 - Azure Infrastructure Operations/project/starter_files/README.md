@@ -62,7 +62,7 @@ variables.json
 **4- Deploy your packer image**
 Run packer file
 
-    packer build -var-file="variables.json" ./packer/server.json
+    packer build -var-file="variables.json" server.json
 
 **5- Deploy your infraustructure with Terraform**
 cd terraform/
