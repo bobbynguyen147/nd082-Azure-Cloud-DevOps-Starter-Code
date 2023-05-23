@@ -1,13 +1,13 @@
 {
-    "if": {
-      "allof": [
-        {
-          "field": "tags['udacity']",
-          "exists": "false"
-        }
-      ]
-    },
-    "then": {
-      "effect": "deny"
-    }
+  "if": {
+    "allof": [
+      {
+        "field": "tags['long-udacity']",
+        "exists": "false"
+      }
+    ]
+  },
+  "then": {
+    "effect": "deny"
+  }
 }

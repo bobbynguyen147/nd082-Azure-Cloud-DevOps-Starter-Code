@@ -6,7 +6,7 @@ provider "azurerm" {
 #  name     = "${var.resource_name}-rg"
 #  location = var.location
 #  tags     = {
-#    udacity = "${var.resource_name}-project-1"
+#    long-udacity = "${var.resource_name}-project-1"
 #  }
 #}
 
@@ -21,7 +21,7 @@ resource "azurerm_virtual_network" "main" {
   location            = data.azurerm_resource_group.main.location
   resource_group_name = data.azurerm_resource_group.main.name
   tags                = {
-    udacity = "${var.resource_name}-project-1"
+    long-udacity = "${var.resource_name}-project-1"
   }
 }
 
@@ -39,7 +39,7 @@ resource "azurerm_public_ip" "public_ip" {
   allocation_method   = "Dynamic"
 
   tags = {
-    udacity = "${var.resource_name}-project-1"
+    long-udacity = "${var.resource_name}-project-1"
   }
 }
 
@@ -54,7 +54,7 @@ resource "azurerm_network_interface" "main" {
     private_ip_address_allocation = "Dynamic"
   }
   tags = {
-    udacity = "${var.resource_name}-project-1"
+    long-udacity = "${var.resource_name}-project-1"
   }
 }
 
@@ -63,8 +63,8 @@ resource "azurerm_network_security_group" "webserver" {
   name                = "${var.resource_name}-webserver-sg"
   location            = data.azurerm_resource_group.main.location
   resource_group_name = data.azurerm_resource_group.main.name
-  tags = {
-    udacity = "${var.resource_name}-project-1"
+  tags                = {
+    long-udacity = "${var.resource_name}-project-1"
   }
 }
 
@@ -120,7 +120,7 @@ resource "azurerm_lb" "main" {
     public_ip_address_id = azurerm_public_ip.public_ip.id
   }
   tags = {
-    udacity = "${var.resource_name}-project-1"
+    long-udacity = "${var.resource_name}-project-1"
   }
 }
 
@@ -141,8 +141,8 @@ resource "azurerm_availability_set" "avset" {
   name                = "${var.resource_name}-avset"
   location            = data.azurerm_resource_group.main.location
   resource_group_name = data.azurerm_resource_group.main.name
-  tags = {
-    udacity = "${var.resource_name}-project-1"
+  tags                = {
+    long-udacity = "${var.resource_name}-project-1"
   }
 }
 
@@ -157,7 +157,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   admin_password                  = var.admin_password
   availability_set_id             = azurerm_availability_set.avset.id
   disable_password_authentication = false
-  network_interface_ids = [
+  network_interface_ids           = [
     azurerm_network_interface.main[count.index].id,
   ]
   os_disk {
@@ -165,7 +165,7 @@ resource "azurerm_linux_virtual_machine" "main" {
     caching              = "ReadWrite"
   }
   tags = {
-    udacity = "${var.resource_name}-project-1"
+    long-udacity = "${var.resource_name}-project-1"
   }
 }
 
@@ -177,8 +177,8 @@ resource "azurerm_managed_disk" "data" {
   disk_size_gb         = 10
   resource_group_name  = data.azurerm_resource_group.main.name
   storage_account_type = "Standard_LRS"
-  tags = {
-    udacity = "${var.resource_name}-project-1"
+  tags                 = {
+    long-udacity = "${var.resource_name}-project-1"
   }
 
 }
