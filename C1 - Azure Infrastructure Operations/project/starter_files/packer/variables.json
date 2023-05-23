@@ -1,9 +1,0 @@
-{
-  "client_id": "535a1be0-1ca7-43e3-b53a-3832d9ab4031",
-  "client_secret": "LwH8Q~~Mvqq7OaCgNXr.KG_YCSE~zEMnPBlyubrH",
-  "subscription_id": "21347db0-e426-46ac-b8a8-cb3f9fee02da",
-  "tenant_id": "5a88b7ca-ce4f-4ab1-ab19-76da78d7a572",
-  "resource_group_name": "udacity-ahmed-rg",
-  "image_name": "udacity-packer-image",
-  "location": "northeurope"
-}

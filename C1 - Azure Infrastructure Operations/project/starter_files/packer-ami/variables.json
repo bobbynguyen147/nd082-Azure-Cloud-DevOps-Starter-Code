@@ -1,0 +1,9 @@
+{
+  "client_id": "b20f207c-e7c3-4148-8fb1-456e01be2eb7",
+  "client_secret": "lte8Q~L5DRCL1wxEx3bpronBYoq.8vKJZlKmGaAq",
+  "subscription_id": "a3a536c2-3690-4c5f-8032-998a8dc3234e",
+  "tenant_id": "f958e84a-92b8-439f-a62d-4f45996b6d07",
+  "resource_group_name": "udacity-ahmed-rg",
+  "image_name": "udacity-packer-image",
+  "location": "West Europe"
+}

@@ -1,11 +1,11 @@
 variable "location" {
   description = "location"
-  default     = "North Europe"
+  default     = "West Europe"
 }
 
 variable "image_id" {
   description = "image_id"
-  default     = "/subscriptions/21347db0-e426-46ac-b8a8-cb3f9fee02da/resourceGroups/udacity-ahmed-rg/providers/Microsoft.Compute/images/udacity-packer-image"
+  default     = "/subscriptions/a3a536c2-3690-4c5f-8032-998a8dc3234e/resourceGroups/Azuredevops/providers/Microsoft.Compute/images/ubuntu-Image-project1"
 }
 
 variable "admin_username" {
@@ -13,18 +13,18 @@ variable "admin_username" {
   default     = "longnguyen"
 }
 
-variable "resource_group_name" {
+variable "resource_name" {
   description = "rsg"
-  default     = "udacity-project1-rsg"
+  default     = "long-udacity"
 }
 
 variable "admin_password" {
   description = "Enter password to use to access the machine"
-  default     = "123@123aA"
+  default     = "Fpt123@a"
 }
 
 variable "numberofvms" {
   description = "number of VMs to create"
-  default     = 1
+  default     = 2
   type        = number 
 }
